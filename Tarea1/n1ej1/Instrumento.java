@@ -36,7 +36,7 @@ public abstract class Instrumento {
 
 
 
-    abstract void tocar();
+    public abstract void tocar();
 
 
 }
