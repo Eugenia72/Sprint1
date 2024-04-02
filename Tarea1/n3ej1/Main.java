@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Main {
     static Scanner input = new Scanner(System.in);
-    static ArrayList<Redactor> redactores = new ArrayList<Redactor>();
+    static ArrayList<Redactor> redactores = new ArrayList <Redactor>();
 
     public static void main(String[] args) {
 
@@ -38,22 +38,22 @@ public class Main {
                     introducirRedactor(" ", " ");
                     break;
                 case 2:
-                    eliminarRedactor(redactores.get(0).getDni());
+                    eliminarRedactor(dni);
                     break;
                 case 3:
-                    // Lógica para introducir noticia a un redactor
+                    // en este caso haré otro switch
                     break;
                 case 4:
-                    // Lógica para eliminar noticia
+                    // método  eliminar noticia
                     break;
                 case 5:
-                    // Lógica para mostrar todas las noticias por redactor
+                    // método para mostrar todas las noticias por redactor
                     break;
                 case 6:
-                    // Lógica para calcular puntuación de la noticia
+                    // método para calcular puntuación de la noticia
                     break;
                 case 7:
-                    // Lógica para calcular precio-noticia
+                    // método para calcular precio-noticia
                     break;
                 case 8:
                     System.out.println("Saliendo del programa...");
