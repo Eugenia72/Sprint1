@@ -1,0 +1,6 @@
+euge 0
+maria 0
+Emi 6
+maria 3
+Mara 7
+ana 1
