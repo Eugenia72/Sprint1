@@ -1,35 +1,35 @@
 package n2ej2;
 
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Main {
 
 
     public static void main(String[] args) {
 
-        List<Restaurante> restaurantes = new ArrayList<>();
+        Set<Restaurante> restauranteSet = new HashSet<Restaurante>();
 
-        restaurantes.add(new Restaurante("Pizza Lola", 9));
-        restaurantes.add(new Restaurante("Floresteca", 7));
-        restaurantes.add(new Restaurante("Pizza Lola ", 8));
-        restaurantes.add(new Restaurante("Braseria Pepe", 5));
-        restaurantes.add(new Restaurante("Floresteca", 3));
+        Restaurante restorante1 = new Restaurante("Pizza Lola", 9);
+        Restaurante restorante2 = new Restaurante("La Fonda", 5);
+        Restaurante restorante3 = new Restaurante("Pizza Lola", 8);
+        Restaurante restorante4 = new Restaurante("La Fonda", 7);
+        Restaurante restorante5 = new Restaurante("Floresteca", 8);
+
+        restauranteSet.add(restorante1);
+        restauranteSet.add(restorante2);
+        restauranteSet.add(restorante3);
+        restauranteSet.add(restorante4);
+        restauranteSet.add(restorante5);
 
 
-
-        System.out.println("Lista de restaurantes sin ordenar :");
-        for (Restaurante restaurante : restaurantes) {
-            System.out.println("Nombre: " + restaurante.getNombre() + ", Puntuación: " + restaurante.getPuntuacion());
-        }
-
-        Collections.sort(restaurantes);
+        List<Restaurante> listaOrdenada = new ArrayList<>(restauranteSet);
+        Collections.sort(listaOrdenada);
 
         System.out.println("Lista de restaurantes ordenada :");
-        for (Restaurante restaurante : restaurantes) {
+        for (Restaurante restaurante : listaOrdenada) {
             System.out.println("Nombre: " + restaurante.getNombre() + ", Puntuación: " + restaurante.getPuntuacion());
         }
     }
 }
+
