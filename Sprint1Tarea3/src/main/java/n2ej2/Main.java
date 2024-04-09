@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Set<Restaurante> restauranteSet = new HashSet<Restaurante>();
+        Set<Restaurante> restauranteSet = new TreeSet();
 
         Restaurante restorante1 = new Restaurante("Pizza Lola", 9);
         Restaurante restorante2 = new Restaurante("La Fonda", 5);
@@ -23,11 +23,11 @@ public class Main {
         restauranteSet.add(restorante5);
 
 
-        List<Restaurante> listaOrdenada = new ArrayList<>(restauranteSet);
-        Collections.sort(listaOrdenada);
+
+
 
         System.out.println("Lista de restaurantes ordenada :");
-        for (Restaurante restaurante : listaOrdenada) {
+        for (Restaurante restaurante : restauranteSet) {
             System.out.println("Nombre: " + restaurante.getNombre() + ", Puntuación: " + restaurante.getPuntuacion());
         }
     }
